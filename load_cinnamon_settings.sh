@@ -1,1 +1,1 @@
-dconf load /org/cinnamon/ < cinnamon_settings
+cp -a .cinnamon ~
