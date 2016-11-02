@@ -79,7 +79,7 @@ sudo apt-get install spotify-client
 ## VLC
 sudo apt-get install vlc
 ## SuperCollider
-sudo apt-get update
+sudo apt-get install qjackctl
 sudo apt-get install supercollider-ide
 
 
