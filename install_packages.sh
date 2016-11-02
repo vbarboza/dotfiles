@@ -23,7 +23,9 @@ sudo add-apt-repository ppa:numix/ppa
 ## Spotify
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-
+## SuperCollider
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys FABAEF95
+sudo add-apt-repository ppa:supercollider/ppa
 
 
 # Update
@@ -76,7 +78,9 @@ sudo apt-get install numix-icon-theme numix-icon-theme-circle
 sudo apt-get install spotify-client
 ## VLC
 sudo apt-get install vlc
-
+## SuperCollider
+sudo apt-get update
+sudo apt-get install supercollider-ide
 
 
 # Update and upgrade
