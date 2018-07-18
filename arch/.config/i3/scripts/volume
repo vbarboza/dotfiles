@@ -1,0 +1,7 @@
+#!/bin/sh
+
+MASTER=`amixer sget Master | grep -Po "\d+%" | tr -d '%'`
+SPEAKER=`amixer sget Speaker | grep -Po "\d+%" | tr -d '%'`
+HEAPHONE=`amixer sget Headphone | grep -Po "\d+%" | tr -d '%'`
+
+echo $MASTER%

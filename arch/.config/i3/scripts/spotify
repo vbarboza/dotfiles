@@ -1,0 +1,20 @@
+#!/bin/bash
+
+GET="dbus-send \
+     --print-reply \
+     --dest=org.mpris.MediaPlayer2.spotify \
+     /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get"
+
+METADATA="string:org.mpris.MediaPlayer2.Player \
+          string:Metadata"
+
+field () {
+FIELD=`$GET $METADATA    |\
+       grep -A3 ":$1\""  |\
+       grep -v $1        |\
+       grep -io "\".*\"" |\
+       tr -d '"'`
+echo $FIELD
+}
+
+echo $(field title) - $(field artist)
